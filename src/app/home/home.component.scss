@@ -1,0 +1,32 @@
+.logo{
+    padding: 15px;
+    border-radius: 50%;
+    border-top: 9px solid;
+    border-top-color: #2cb5bf;
+    border-bottom: 7px solid;
+    font-weight: 600;
+    font-size: 39px;
+    height: 97px;
+    width: 300px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.slide-show-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 300px;
+}
+.slide{
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.slide1{
+    animation: animate__slideOutRight;
+    animation-duration: 2s;
+}
