@@ -1,20 +1,77 @@
-<div class="home-container">
-    <div class="slide-show-container">
-        <div id="slide1" class="slide1 slide">
+<div class="home-container ">
+    <div class="slide-show-container" style="background-color: rebeccapurple;">
+        <div id="slide1" style="background-color: #fff;" class="slide1 slide p30">
             <div class="logo">JUN AUTO</div>
         </div>
-        <!-- <div class="slide2 slide">
+        <div class="slide2 slide p30" style="display: none;">
 
         </div>
-        <div class="slide3 slide">
+        <div class="slide3 slide p30" style="display: none;">
 
-        </div> -->
+        </div>
         
     </div>
-    <div class="company-container">
-
+    <div class="company-container p30">
+            <div class="inner-container">
+                <div class="animation-container">
+                    <div class="img">img</div>
+                </div>
+                <div class="company">
+                    <div class="comp-child-container">
+                        <div class="comp-left">
+                            <div class="heading">
+                                Our Company
+                            </div>
+                            <div class="content">
+                                Jun Auto , a global automotive technology leader in Seating and E-Systems, is Making every drive better™ by 
+                                delivering intelligent in-vehicle experiences for customers around the world.
+                            </div>
+                        </div>
+                        <div class="comp-right">
+                            <div class="heading">
+                                Our Culture
+                            </div>
+                            <div class="content">
+                                Our diverse team of talented employees in 37 countries is driven by a commitment to innovation, 
+                                operational excellence, and sustainability as we live our values to Be Inclusive, Be Inventive, 
+                                and Get Results the Right Way.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="nav-button">
+                        <div class="btn" (click)="navto('company')" >
+                            GET TO KNOW US
+                        </div>
+                    </div>
+                </div>
+            </div>
     </div>
-    <div class="technology-container">
+    <div class="technology-container p30">
+        <div class="inner-container">
+            <div class="tech-left">
+                <div class="tech-img">
+                    img
+                </div>
+            </div>
+            <div class="tech-right">
+                <div class="heading">
+                    <div>Forward Thinking.</div>
+                    <div>Available Now.</div> 
+                </div>
+                <div class="content">
+                    Our future-focused technologies are redefining how drivers experience mobility.
+                </div>
+                <div class="nav-button">
+                    <div class="btn" (click)="navto('technology')"> DISCOVER OUR TECHNOLOGIES</div>
+                </div>
+            </div>
+
+        </div>
+        <div class="tech-absolute">
+            <div class="anime-image">
+                img
+            </div>
+        </div>
 
     </div>
 

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { CommonService } from '../services/common-service';
 
 @Component({
   selector: 'app-header',
@@ -8,8 +9,12 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent {
 
-  constructor(private route:Router){
-
+  constructor(private route:Router, private CommonService:CommonService){
+    this.CommonService.headerNavService.subscribe((data)=>{
+      console.log("debug common service data",data)
+      let url = location.href;
+      this.selectTabBasedOnRoute(url);
+    })
   }
 
   ngOnInit(){
@@ -18,15 +23,20 @@ export class HeaderComponent {
       this.selectTabBasedOnRoute(url);
   }
 
+  
+
   selected = "";
 
   selectTabBasedOnRoute(url:any){
+    console.log("debug url",url)
     if(url.includes('home')){
       this.navto('home')
     }else if(url.includes('company')){
       this.navto('company')
     }else if(url.includes('technology')){
       this.navto('technology')
+    }else{
+      this.selected = 'home'
     }
 
   }
@@ -42,6 +52,10 @@ export class HeaderComponent {
       }else if(comp == "Technology"){
         this.route.navigateByUrl("/technology")
       }
+  }
+
+  navToHome(){
+    location.href = "";
   }
   
 

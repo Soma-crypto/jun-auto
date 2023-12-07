@@ -1,0 +1,67 @@
+.p30{
+    padding: 60px 30px;
+}
+.footer-container{
+    background-color: #2cb5bf;
+}
+.footer-inner{
+    display: flex;
+    gap: 40px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.address-container{
+    width: 40%;
+}
+.gmap-container{
+    width: 54%;
+}
+.address-container{
+    display: flex;
+    flex-direction: column;
+}
+.ofline-address{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+.anime-image .img{
+    width: 100px;
+    height: 100px;
+    background-color: lightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.address{
+    font-size: 15px;
+    line-height: 20px;
+}
+.company-name{
+    font-weight: 600;
+}
+.address-line{
+    font-style: italic;
+}
+.online-address{
+    display: flex;
+    gap: 30px;
+    margin-top: 15px;
+    align-items: center;
+}
+.followuson{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    background-color: lightblue;
+}
+.gmap{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: lightblue;
+    width: 80%;
+    height: 300px;
+}
