@@ -55,7 +55,7 @@
     align-items: center;
     width: 30px;
     height: 30px;
-    background-color: lightblue;
+    
 }
 .gmap{
     display: flex;
@@ -66,3 +66,10 @@
 
 .mapouter{position:relative;height:250px;width:590px;background:#fff;} .maprouter a{color:#fff !important;position:absolute !important;top:0 !important;z-index:0 !important;}
 .gmap_canvas{overflow:hidden;height:250px;width:590px}.gmap_canvas iframe{position:relative;z-index:2}
+.img{
+    width: 30px;
+    height: 30px;
+}
+img{
+    width: 100%;
+}

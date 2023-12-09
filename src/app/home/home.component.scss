@@ -14,10 +14,10 @@
     align-items: center;
 }
 .slide-show-container{
-    display: flex;
+    // display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 300px;
+    min-height: 420px;
 }
 .slide{
     width: 100%;
@@ -25,11 +25,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    position: absolute;
+    top: 0px;
 }
-.slide1{
-    animation: animate__slideOutRight;
-    animation-duration: 2s;
-}
+
 .company-container .inner-container{
     display: flex;
     justify-content: space-between;
@@ -124,7 +123,7 @@
     position: absolute;
     background-color: #2cb5bf;
     top: -67px;
-    left: -122px;
+    left: -50%;
     width: 47%;
     height: 500px;
     display: flex;
@@ -148,4 +147,11 @@
 
 .technology-container .heading{
     text-align: center;
+}
+
+.quoted{
+    font-size: 40px;
+    color: #fff;
+    text-shadow: 2px 1px #2cb5bf;
+    font-weight: 600;
 }
