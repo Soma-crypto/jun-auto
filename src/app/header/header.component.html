@@ -7,7 +7,16 @@
             <div class="nav-item" (click)="navto('Technology')" [ngClass]="{selected: selected=='technology'}" >Technology</div>
         </div>
         <div class="nav-mobile">
-            <mat-icon>menu</mat-icon>
+            <mat-icon (click)="openMenu()" *ngIf="!mobileMenuOpen">menu</mat-icon>
+            <mat-icon (click)="closeMenu()" *ngIf="mobileMenuOpen">close</mat-icon>
         </div>
+    </div>
+</div>
+<div class="mobile-nav-overlay" *ngIf="mobileMenuOpen"></div>
+<div class="mobile-nav" *ngIf="mobileMenuOpen">
+    <div class="nav-mobile-menu" >
+        <div class="nav-item" [ngClass]="{selected: selected=='home'}"  (click)="navto('Home')" >Home</div>
+        <div class="nav-item" (click)="navto('Company')" [ngClass]="{selected: selected=='company'}"  >Company</div>
+        <div class="nav-item" (click)="navto('Technology')" [ngClass]="{selected: selected=='technology'}" >Technology</div>
     </div>
 </div>

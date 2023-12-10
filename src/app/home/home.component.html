@@ -1,5 +1,5 @@
 <div class="home-container ">
-    <div class="slide-show-container" style="background-color: rebeccapurple; position: relative;">
+    <div class="slide-show-container" style="position: relative;">
         <div id="slide1" style="background-color: #fff;" class="slide1 slide p30">
             <div class="logo">JUN AUTO</div>
         </div>
@@ -9,6 +9,7 @@
         <div id="slide3" class="slide3 slide p30" style="display: none;background-color: #2cb5bf;">
 
         </div>
+        <div class="slide slide-overlay"></div>
         <div *ngIf="showQuote" class="slide3 slide p30">
             <h1 class="quoted" >"Parts crafted for excellence, elevating driving satisfaction."</h1>
         </div>
@@ -17,7 +18,7 @@
     <div class="company-container p30">
             <div class="inner-container">
                 <div class="animation-container">
-                    <div class="img">img</div>
+                    <div ><lottie-player class="refwid_box_1_img" src="../../assets/images/anime/culture.json"  background="transparent"  speed="1" style="width: 200px; height: 200px;" loop autoplay></lottie-player></div>
                 </div>
                 <div class="company">
                     <div class="comp-child-container">
@@ -56,7 +57,7 @@
                     
                 </div>
             </div>
-            <div class="tech-right">
+            <div class="tech-right" style="opacity: 0;">
                 <div class="heading">
                     <div>Forward Thinking.</div>
                     <div>Available Now.</div> 
@@ -67,12 +68,23 @@
                 <div class="nav-button">
                     <div class="btn" (click)="navto('technology')"> DISCOVER OUR TECHNOLOGIES</div>
                 </div>
+                
             </div>
 
         </div>
         <div class="tech-absolute">
-            <div class="anime-image">
-                img
+            <div class="tech-right">
+                <!-- <lottie-player class="refwid_box_1_img tech-lottie" src="../../assets/images/anime/machine.json"  background="transparent"  speed="1" loop autoplay></lottie-player> -->
+                <div class="heading">
+                    <div>Reliable Parts,</div>
+                    <div>Smooth Rides.</div> 
+                </div>
+                <div class="content">
+                    Count on our parts for consistently smooth and reliable drives.
+                </div>
+                <div class="nav-button">
+                    <div class="btn" (click)="navto('technology')"> DISCOVER OUR TECHNOLOGIES</div>
+                </div>
             </div>
         </div>
 

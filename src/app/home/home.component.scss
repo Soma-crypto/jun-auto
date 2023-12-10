@@ -14,10 +14,11 @@
     align-items: center;
 }
 .slide-show-container{
-    // display: flex;
+    display: flex;
     justify-content: center;
     align-items: center;
     min-height: 420px;
+    overflow: hidden;
 }
 .slide{
     width: 100%;
@@ -27,6 +28,8 @@
     align-items: center;
     position: absolute;
     top: 0px;
+    text-align: center;
+    z-index: 2;
 }
 
 .company-container .inner-container{
@@ -60,7 +63,7 @@
 
 .company .heading, .tech-right .heading{
     font-size: 38px;
-    font-weight: 400;
+    font-weight: 600;
     line-height: 42px;
 }
 .content{
@@ -82,6 +85,7 @@
     padding: 10px 30px;
     border-radius: 5px;
     cursor: pointer;
+    box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.3);
 }
 .company-container{
     border-top: 2px solid #f5f5f5;
@@ -99,10 +103,12 @@
 }
 .comp-left{
     border-right: 2px solid #efefed;
-    width: 46%;
+
 }
-.comp-child-container .comp-right{
-    width: 46%;
+.comp-child-container .comp-right,.comp-child-container .comp-left{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
 }
 .tech-left{
     display: flex;
@@ -121,7 +127,7 @@
 }
 .tech-absolute{
     position: absolute;
-    background-color: #2cb5bf;
+    background-color: rgba(44, 181, 191, 0.6);
     top: -67px;
     left: -50%;
     width: 47%;
@@ -136,13 +142,10 @@
 
 .tech-absolute .anime-image{
     display: flex;
-    width: 100px;
-    height: 100px;
+    width: 300px;
+    height: 300px;
     justify-content: center;
     align-items: center;
-    background-color: #2cb5bf;
-    opacity: 0.5;
-    border: 1px solid green;
 }
 
 .technology-container .heading{
@@ -154,4 +157,87 @@
     color: #fff;
     text-shadow: 2px 1px #2cb5bf;
     font-weight: 600;
+    line-height: 50px;
 }
+.slide-show-container{
+    background-image: url('../../assets/images/carousal-bg.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.slide-overlay{
+    z-index: 1;
+    height: 100%;
+    background-color: black;
+    opacity: 0.3;
+}
+.technology-container{
+    background-image: linear-gradient(rgba(0,0,0,.4),rgba(0,0,0,.4)),url('../../assets/images/tech-bg.png');
+    background-position: 0 0,50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
+@media screen and (max-width: 1100px) {
+    .comp-child-container {
+      justify-content: space-between;
+    }
+    .comp-left{
+        width: 47%;
+        padding-right: 30px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+   .company-container .inner-container{
+    flex-direction: column;
+   }
+   .technology-container.p30{
+     padding: 61px 30px !important;
+   }
+   .tech-absolute{
+    top: -15%;
+    width: 75%;
+    }
+    .company .heading, .tech-right .heading{
+        font-size: 31px;
+    }
+}
+@media screen and (max-width: 550px) {
+    .comp-child-container{
+     flex-direction: column;
+    }
+    .comp-child-container .comp-left,.comp-child-container .comp-right{
+        width: 100%;
+    }
+    .comp-child-container .comp-left{
+        padding-right: 0px;
+        border: none;
+    }
+    .p30{
+        padding: 30px;
+    }
+    .quoted{
+        padding: 0px 30px;
+        font-size: 33px;
+    }
+    .slide-show-container{
+        min-height: 360px;
+    }
+    .tech-absolute{
+        width: 85%;
+        top: -2%;
+    }
+ }
+
+ @media screen and (max-width:350px){
+    .company .heading, .tech-right .heading{
+        font-size: 21px;
+        line-height: 24px;
+    }
+    .btn{
+        font-size: 12px;
+    }
+ }
