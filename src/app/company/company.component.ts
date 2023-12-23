@@ -1,4 +1,6 @@
+
 import { Component } from '@angular/core';
+import { AnimationService } from '../services/animation-service';
 
 @Component({
   selector: 'app-company',
@@ -6,5 +8,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./company.component.scss']
 })
 export class CompanyComponent {
+  constructor(private AnimationService:AnimationService){}
+  ngOnInit(){
+    this.slideAboutUsHeading();
+  }
+  slideAboutUsHeading(){
+      let ele = document.querySelector('.about-us-heading');
+      this.AnimationService.slideCustom(ele,{display:'flex',left:'-50%'},{left:'0%'})
+  }
 
 }

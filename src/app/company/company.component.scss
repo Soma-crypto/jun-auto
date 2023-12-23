@@ -1,0 +1,60 @@
+.about-us{
+    padding: 30px 30px;
+    background-image: url('../../assets/images/junautocompany.png');
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+.about-us .inner-container{
+    display: flex;
+    gap: 30px;
+    font-size: 16px;
+    font-weight: 400;
+    align-items: center;
+    z-index: 2;
+    position: relative;
+    color: #fff;
+    justify-content: flex-end;
+    line-height: 22px;
+}
+.about-us-detail{
+    width: 55%;
+}
+.about-us-detail-inner{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.firs-word{
+    margin-left: 10px;
+}
+.about-us-heading{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 40px;
+    line-height: 50px;
+    font-weight: 600;
+    position: absolute;
+    background-color: rgba(44, 181, 191, 0.4);
+    left: 0px;
+    height: 200%;
+    z-index: 2;
+    top: -50%;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+    color: #fff;
+    width: 36%;
+    align-items: center;
+    display: none;
+}
+.background-overlay{
+    position: absolute;
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+    opacity: 0.7;
+}
