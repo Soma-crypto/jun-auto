@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { CompanyComponent } from './company/company.component';
 import { TechnologyComponent } from './technology/technology.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 const routes: Routes = [
   {path:'home',component:HomeComponent},
@@ -13,7 +14,9 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes),
+    BrowserAnimationsModule,
+  ],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

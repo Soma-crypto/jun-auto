@@ -58,3 +58,109 @@
     z-index: 1;
     opacity: 0.7;
 }
+.aim-inner-container{
+    padding: 30px;
+}
+.aim-inner-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.aim-header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 62%;
+}
+.aim-heading-description{
+    text-align: center;
+    font-size: 16px;
+    margin-top: 10px;
+}
+.aim-heading{
+    font-size: 30px;
+    line-height: 35px;
+    font-weight: 500;
+}
+.board-members-container{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    align-items: center;
+    width: 100%;
+    margin-top: 30px;
+    max-width: 70%;
+    flex-wrap: wrap;
+}
+.card-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+    box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    position: relative;
+    padding: 5px;
+}
+.card-detail-container{
+    // display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    position: absolute;
+    bottom: 3px;
+    font-size: 15px;
+    font-weight: 500;
+    border-top: 1px solid lightgrey;
+    padding: 5px 0px;
+    display: none;
+    height: 0px;
+    overflow: hidden;
+   
+}
+.card-img{
+    background-color: grey;
+    color: white;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+}
+.card-container:hover .card-detail-container{
+    display: flex;
+    background-color: #fff;
+    animation-name: card-detail;
+    animation-duration: 0.5s;
+    // animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes card-detail {
+    from {
+        height: 0;
+    }
+
+    to {
+        height: 51PX;
+    }
+}
+
+.card-container:hover .card-overlay{
+    display: block;
+}
+
+.card-overlay{
+    position: absolute;
+    background-color: black;
+    width: 96%;
+    height: 94%;
+    border-radius: 8px;
+    padding: 0px;
+    opacity: 0.4;
+    display: none;
+}
