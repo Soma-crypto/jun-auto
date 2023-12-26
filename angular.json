@@ -18,7 +18,7 @@
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "outputPath": "dist/june-auto",
-            "glob":"src/_redirects",
+            "glob":"_redirects",
             "input":"src",
             "output":"/",
             "index": "src/index.html",
