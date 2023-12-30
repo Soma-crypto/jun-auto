@@ -19,9 +19,7 @@ export class HomeComponent {
   technologiesAnimationDone = false;
 
   ngOnInit(){
-    setTimeout(() => {
-      this.slideShowAnimate();
-    }, 500);
+    
     
   }
 

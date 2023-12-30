@@ -3,15 +3,15 @@
     border-radius: 50%;
     border-top: 9px solid;
     border-top-color: #2cb5bf;
-    border-bottom: 7px solid;
+    border-bottom: 7px solid black;
     font-weight: 600;
     font-size: 39px;
     height: 97px;
     width: 300px;
-    
     display: flex;
     justify-content: center;
     align-items: center;
+    color: black;
 }
 .slide-show-container{
     display: flex;
@@ -159,17 +159,14 @@
     font-weight: 600;
     line-height: 50px;
 }
-.slide-show-container{
-    background-image: url('../../assets/images/carousal-bg.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
+
 .slide-overlay{
     z-index: 1;
     height: 100%;
     background-color: black;
     opacity: 0.3;
+    position: absolute;
+    width: 100%;
 }
 .technology-container{
     background-image: linear-gradient(rgba(0,0,0,.4),rgba(0,0,0,.4)),url('../../assets/images/tech-bg.png');
@@ -180,6 +177,100 @@
     overflow: hidden;
 }
 
+
+.slid-show-container .slide{
+    display: flex;
+    position:absolute;
+  width: 100%;
+  justify-content: center;
+  background: white;
+  height: 100%;
+  align-items: center;
+  color: green;
+  font-size: 30px;
+  font-weight: bold;
+  overflow:hidden;
+}
+
+
+
+.slid-show-container{
+    background-image: url('../../assets/images/carousal-bg.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 420px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+
+
+.slid-show-container .slide1{
+  display: flex;
+    position:absolute;
+  
+  justify-content: center;
+  background: white;
+  
+  align-items: center;
+  font-size: 30px;
+  font-weight: bold;
+  overflow:hidden;
+   animation: slideMain;
+    animation-delay:0.5s;
+  animation-duration:0.7s;
+  animation-iteration-count:1;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease; 
+    z-index:10;
+}
+
+.slid-show-container .slide2{
+background-color:black;
+z-index:9;
+animation: slideMain;
+  animation-duration:0.7s; 
+  animation-iteration-count:1;
+animation-fill-mode: forwards;
+animation-delay: 0.7s;
+animation-timing-function: ease; 
+}
+
+.slid-show-container .slide3{
+background-color:#2cb5bf;
+z-index:8;
+animation: slideMain;
+  animation-duration:0.3s;
+  animation-iteration-count:1;
+animation-fill-mode: forwards;
+animation-delay: 1s; 
+animation-timing-function: ease;  
+}
+
+.slide4{
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes slideMain{
+from{
+ position: absolute;
+  left: 0;
+  display:flex;
+}
+to{
+  position: absolute;
+  left: 100%;
+  display: none;
+}
+}
+
 @media screen and (max-width: 1100px) {
     .comp-child-container {
       justify-content: space-between;
@@ -187,6 +278,13 @@
     .comp-left{
         width: 47%;
         padding-right: 30px;
+    }
+}
+
+@media screen and (max-width: 1040px) {
+    .quoted{
+        text-align: center;
+        width: 600px;
     }
 }
 
@@ -204,10 +302,18 @@
     .company .heading, .tech-right .heading{
         font-size: 31px;
     }
+    .quoted{
+        width: 90%;
+        font-size: 30px;
+    }
+    
 }
 @media screen and (max-width: 550px) {
     .comp-child-container{
      flex-direction: column;
+    }
+    .slid-show-container{
+        height: 350px;
     }
     .comp-child-container .comp-left,.comp-child-container .comp-right{
         width: 100%;
@@ -229,6 +335,12 @@
     .tech-absolute{
         width: 85%;
         top: -2%;
+    }
+ }
+
+ @media screen and (max-width:380px){
+    .quoted{
+        font-size: 26px;
     }
  }
 
