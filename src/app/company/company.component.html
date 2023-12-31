@@ -193,10 +193,176 @@
     <section class="cpcs-container" >
         <div class="cpcs-inner-container">
             <div class="section-nav-container">
-                <div class="nav-btn" >Clients</div>
-                <div class="nav-btn" >Products</div>
-                <div class="nav-btn" >Certification</div>
-                <div class="nav-btn" >Strengths</div>
+                <div class="nav-btn" [ngClass]="{activeNav: selectedMenu=='Clients'}" (click)="choosedNav('Clients')" >Clients</div>
+                <div class="nav-btn" [ngClass]="{activeNav: selectedMenu=='Products'}" (click)="choosedNav('Products')">Products</div>
+                <div class="nav-btn" [ngClass]="{activeNav: selectedMenu=='Certification'}" (click)="choosedNav('Certification')" >Certification</div>
+                <div class="nav-btn" [ngClass]="{activeNav: selectedMenu=='Strengths'}" (click)="choosedNav('Strengths')" >Strengths</div>
+            </div>
+
+            <div class="content-container">
+
+                <!-- ------ client section ----- -->
+
+                <div class="clients-container nav-content-container" [ngClass]="{show: selectedMenu=='Clients'}" >
+                    <div class="client-inner-container">
+                        <div class="client-title">
+                            Meeting diverse client needs.
+                        </div>
+                        <div class="client-description">
+                            We excel by meeting diverse needs through personalized, tailored solutions.
+                        </div>
+                        <div class="client-body">
+                            <div class="client-card">
+                                <div class="client-card-heading">
+                                    <div class="client-logo">
+                                        <img src="../../assets/images/hyundai.png" alt="hyundai" srcset="">
+                                    </div>
+                                    <div class="client-name">
+                                        HYUNDAI
+                                    </div>
+                                </div>
+                                <div class="client-card-body">
+                                    <div class="image-card-container">
+                                        <div class="image-card">
+                                            <img src="../../assets/images/verna.jpeg" alt="hyndai" srcset="">
+                                        </div>
+                                        <div class="client-sub-title">
+                                            Verna
+                                        </div>
+                                    </div>
+                                    <div class="image-card-container">
+                                        <div class="image-card">
+                                            <img src="../../assets/images/venue.jpeg" alt="hyndai" srcset="">
+                                        </div>
+                                        <div class="client-sub-title">
+                                            Venue
+                                        </div>
+                                    </div>
+                                    <div class="image-card-container">
+                                        <div class="image-card">
+                                            <img src="../../assets/images/creta.jpeg" alt="hyndai" srcset="">
+                                        </div>
+                                        <div class="client-sub-title">
+                                            Creata
+                                        </div>
+                                    </div>
+                                    <div class="image-card-container">
+                                        <div class="image-card">
+                                            <img src="../../assets/images/alcasar.jpeg" alt="hyndai" srcset="">
+                                        </div>
+                                        <div class="client-sub-title">
+                                            Alcazar
+                                        </div>
+                                    </div>
+                                    <div class="image-card-container">
+                                        <div class="image-card">
+                                            <img src="../../assets/images/i10.jpeg" alt="hyndai" srcset="">
+                                        </div>
+                                        <div class="client-sub-title">
+                                            i10
+                                        </div>
+                                    </div>
+                                    <div class="image-card-container">
+                                        <div class="image-card">
+                                            <img src="../../assets/images/i20.jpeg" alt="hyndai" srcset="">
+                                        </div>
+                                        <div class="client-sub-title">
+                                            i20
+                                        </div>
+                                    </div>
+                                        
+                                </div>
+                                <div class="quote-symbol"><mat-icon> format_quote</mat-icon></div>
+                            </div>
+                            <div class="client-card">
+                                <div class="client-card-heading">
+                                    <div class="client-logo">
+                                        <img src="../../assets/images/kia.png" alt="hyundai" srcset="">
+                                    </div>
+                                    <div class="client-name">
+                                        KIA
+                                    </div>
+                                </div>
+                                <div class="client-card-body">
+                                    <div class="image-card-container">
+                                        <div class="image-card">
+                                            <img src="../../assets/images/seltos.jpeg" alt="hyndai" srcset="">
+                                        </div>
+                                        <div class="client-sub-title">
+                                            Seltos
+                                        </div>
+                                    </div>
+                                    <div class="image-card-container">
+                                        <div class="image-card">
+                                            <img src="../../assets/images/sonet.jpeg" alt="hyndai" srcset="">
+                                        </div>
+                                        <div class="client-sub-title">
+                                            Sonet
+                                        </div>
+                                    </div>
+                                    <div class="image-card-container">
+                                        <div class="image-card">
+                                            <img src="../../assets/images/carens.jpeg" alt="hyndai" srcset="">
+                                        </div>
+                                        <div class="client-sub-title">
+                                            Carens
+                                        </div>
+                                    </div>
+                                    <div class="image-card-container">
+                                        <div class="image-card">
+                                            <img src="../../assets/images/carnival.jpeg" alt="hyndai" srcset="">
+                                        </div>
+                                        <div class="client-sub-title">
+                                            Carnival
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="quote-symbol"><mat-icon> format_quote</mat-icon></div>
+                            </div>
+                            <div class="client-card">
+                                <div class="client-card-heading">
+                                    <div class="client-logo" style="width: 30px;">
+                                        <img src="../../assets/images/isuzu.png" alt="hyundai" srcset="">
+                                    </div>
+                                    <div class="client-name">
+                                        ISUZU
+                                    </div>
+                                </div>
+                                <div class="client-card-body" style="justify-content: start;margin-left: 20px;">
+                                    <div class="image-card-container">
+                                        <div class="image-card">
+                                            <img src="../../assets/images/d-max.jpeg" alt="hyndai" srcset="">
+                                        </div>
+                                        <div class="client-sub-title">
+                                            D-Max
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="quote-symbol"><mat-icon> format_quote</mat-icon></div>
+                            </div>
+
+                           
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ------ client section ----- -->
+
+
+
+
+
+                <div class="products-container nav-content-container" [ngClass]="{show: selectedMenu=='Products'}">
+                    Products
+                </div>
+                <div class="certification-container nav-content-container" [ngClass]="{show: selectedMenu=='Certification'}">
+                    Certification
+                </div>
+                <div class="strengths-container nav-content-container" [ngClass]="{show: selectedMenu=='Strengths'}">
+                    Strengths
+                </div>
+                
+
             </div>
         </div>
     </section>
