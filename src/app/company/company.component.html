@@ -355,11 +355,14 @@
                 <div class="products-container nav-content-container" [ngClass]="{show: selectedMenu=='Products'}">
                     <div class="our-products-inner-section">
                         <div class="carosal-container">
-                            <div class="prev-icon"><mat-icon class="nav-before" >navigate_before</mat-icon><mat-icon class="nav-before" style="margin-left: -33px;">navigate_before</mat-icon></div>
-                            <div class="main-image">
-                                <img src="../../assets/images/verna.jpeg" alt="">
-                            </div>
-                            <div class="next-icon"><mat-icon class="nav-next" >navigate_next</mat-icon><mat-icon class="nav-next" style="margin-left: -33px;">navigate_next</mat-icon></div>
+                            
+                            <ng-container *ngFor="let item of productsArray; let i = index;">
+                                <div class="main-image show" [ngClass]="{showleft: slideDir == 'l', showright: slideDir == 'r'}"  *ngIf="i == selectedSlideIndex">
+                                    <img src="../../assets/images/{{item.img}}" alt="">
+                                </div>
+                            </ng-container>
+                            <div class="prev-icon" (click)="slidePrev(selectedSlideIndex,'l')" ><mat-icon class="nav-before" >navigate_before</mat-icon><mat-icon class="nav-before" style="margin-left: -33px;">navigate_before</mat-icon></div>
+                            <div class="next-icon" (click)="slideNext(selectedSlideIndex,'r')" ><mat-icon class="nav-next"  >navigate_next</mat-icon><mat-icon class="nav-next" style="margin-left: -33px;">navigate_next</mat-icon></div>
                         </div>
                         <div class="products-card-container">
                             <div class="products-card">
