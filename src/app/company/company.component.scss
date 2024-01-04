@@ -25,9 +25,9 @@
     flex-direction: column;
     gap: 10px;
 }
-.firs-word{
-    margin-left: 10px;
-}
+// .firs-word{
+//     margin-left: 10px;
+// }
 .about-us-heading{
     display: flex;
     flex-direction: column;
@@ -146,6 +146,13 @@
     border-bottom: 1px solid #d0c5c5;
 }
 
+.slideUp{
+    animation-name: slide-up;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
 @keyframes card-detail {
     from {
         height: 0;
@@ -154,6 +161,18 @@
     to {
         height: 25px;
     }
+}
+
+@keyframes slide-up {
+    from{
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0%);
+        opacity: 1;
+    }
+    
 }
 
 .card-container:hover .card-overlay{
@@ -366,6 +385,7 @@ img{
     flex-wrap: wrap;
     margin-top: 30px;
     justify-content: center;
+    width: 100%;
 }
 .prev-icon{
     position: absolute;
@@ -496,6 +516,11 @@ body {background: #eee;}
     animation-timing-function: ease-in;
     animation-iteration-count:1;
     animation-fill-mode: forwards;
+}
+
+.products-image img{
+    width: 100%;
+    height: 100%;
 }
  
 @keyframes swing {

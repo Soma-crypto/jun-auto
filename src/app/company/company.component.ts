@@ -18,47 +18,47 @@ export class CompanyComponent {
     this.productsArray = [
       {
         'img':'verna.jpeg',
-        'products':['verna.jpeg','alcasar.jpeg','hyundai.png']
+        'products':[{'img':'verna-door-panel.jpeg','label':'Door panel'},{'img':'trim-cover1.jpeg','label':'Trim cover'},{'img':'trim-cover2.jpeg','label':'Trim cover'}]
       },
       {
         'img':'alcasar.jpeg',
-        'products':['verna.jpeg','alcasar.jpeg','hyundai.png']
+        'products':[{'img':'creta-alcazar-door.jpeg','label':'Door panel'},{'img':'seating2.jpeg','label':'Seating'},{'img':'seat-cut-panel2.jpeg','label':'Seat panel'}]
       },
       {
         'img':'venue.jpeg',
-        'products':['verna.jpeg','alcasar.jpeg','hyundai.png']
+        'products':[{'img':'seating2.jpeg','label':'Seating'},{'img':'seating.jpeg','label':'Seting'},{'img':'trim-cover4.jpeg','label':'Trim cover'}]
       },
       {
         'img':'creta.jpeg',
-        'products':['verna.jpeg','alcasar.jpeg','hyundai.png']
+        'products':[{'img':'creta-alcazar-door.jpeg','label':'Door panel'},{'img':'trim-cover4.jpeg','label':'Trim cover'},{'img':'trim-cover2.jpeg','label':'Trim cover'}]
       },
       {
         'img':'i10.jpeg',
-        'products':['verna.jpeg','alcasar.jpeg','hyundai.png']
+        'products':[{'img':'seating.jpeg','label':'Seating'},{'img':'seating2.jpeg','label':'Seating'},{'img':'trim-cover3.jpeg','label':'Trim cover'}]
       },
       {
         'img':'i20.jpeg',
-        'products':['verna.jpeg','alcasar.jpeg','hyundai.png']
+        'products':[{'img':'trim-cover4.jpeg','label':'Trim cover'},{'img':'trim-cover2.jpeg','label':'Trim cover'},{'img':'trim-cover3.jpeg','label':'Trim cover'}]
       },
       {
         'img':'seltos.jpeg',
-        'products':['verna.jpeg','alcasar.jpeg','hyundai.png']
+        'products':[{'img':'seltos-door.jpeg','label':'Door panel'},{'img':'trim-cover1.jpeg','label':'Trim cover'},{'img':'trim-cover2.jpeg','label':'Trim cover'}]
       },
       {
         'img':'sonet.jpeg',
-        'products':['verna.jpeg','alcasar.jpeg','hyundai.png']
+        'products':[{'img':'sonet-door.jpeg','label':'verna'},{'img':'seat-cut-panel2.jpeg','label':'alcazar'},{'img':'seat-cut-panel.jpeg','label':'creta'}]
       },
       {
         'img':'carens.jpeg',
-        'products':['verna.jpeg','alcasar.jpeg','hyundai.png']
+        'products':[{'img':'trim-cover5.jpeg','label':'Trim cover'},{'img':'trim-cover4.jpeg','label':'Trim cover'},{'img':'seat-cut-panel.jpeg','label':'Seat panel'}]
       },
       {
         'img':'carnival.jpeg',
-        'products':['verna.jpeg','alcasar.jpeg','hyundai.png']
+        'products':[{'img':'trim-cover3.jpeg','label':'Trim cover'},{'img':'trim-cover2.jpeg','label':'Trim cover'},{'img':'trim-cover1.jpeg','label':'Trim cover'}]
       },
       {
         'img':'d-max.jpeg',
-        'products':['verna.jpeg','alcasar.jpeg','hyundai.png']
+        'products':[{'img':'seating2.jpeg','label':'Seating'},{'img':'creta-alcazar-door.jpeg','label':'Door panel'},{'img':'seat-cut-panel2.jpeg','label':'Seat panel'}]
       }
     ]
   }

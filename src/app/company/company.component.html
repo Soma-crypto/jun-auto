@@ -13,7 +13,7 @@
             <div class="about-us-detail">
                 <div class="about-us-detail-inner">
                     <div>
-                        <span class="firs-word">Jun </span>Automotive is an established company in the Development and Manufacturer for Automotive Seating & Interior Components.
+                        <span class="firs-word">Jun </span>Automotive is an established company in the Development and Manufacturer for Automotive Seating and Interior Components.
                     </div>
                     <div>
                         <span class="firs-word">Cutting, </span>Sewing and Assembly for Automotive components parts Supply to various Automotive OEM applications.
@@ -365,7 +365,13 @@
                             <div class="next-icon" (click)="slideNext(selectedSlideIndex,'r')" ><mat-icon class="nav-next"  >navigate_next</mat-icon><mat-icon class="nav-next" style="margin-left: -33px;">navigate_next</mat-icon></div>
                         </div>
                         <div class="products-card-container">
-                            <div class="products-card">
+                            <div class="products-card slideUp"  *ngFor="let item of productsArray[selectedSlideIndex].products" >
+                                <div class="products-image">
+                                    <img src="../../assets/images/products/{{item.img}}" alt="" srcset="">
+                                </div>
+                                <div class="prducts-name"> {{item.label}} </div>
+                            </div>
+                            <!-- <div class="products-card">
                                 <div class="products-image">
                                     <img src="../../assets/images/alcasar.jpeg" alt="" srcset="">
                                 </div>
@@ -388,13 +394,7 @@
                                     <img src="../../assets/images/alcasar.jpeg" alt="" srcset="">
                                 </div>
                                 <div class="prducts-name">Seat cover</div>
-                            </div>
-                            <div class="products-card">
-                                <div class="products-image">
-                                    <img src="../../assets/images/alcasar.jpeg" alt="" srcset="">
-                                </div>
-                                <div class="prducts-name">Seat cover</div>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
