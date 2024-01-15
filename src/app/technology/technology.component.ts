@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./technology.component.scss']
 })
 export class TechnologyComponent {
+  length = 10;
 
 }
