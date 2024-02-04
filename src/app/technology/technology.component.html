@@ -7,23 +7,23 @@
             <ng-container *ngFor="let item of carousal" >
                 
                     <div class="image-container" *ngIf="item.index == selectedIndex">
-                        <div class="row row1">
-                            <div class="image-card" *ngFor="let images of item.imagesRow1" >
-                                <div class="inner-image">
-                                    <img src="../../assets/images/{{images.img}}" alt="">
+                        <div class="image-inner-container">
+                            <div class="row row1">
+                                <div class="image-card" *ngFor="let images of item.imagesRow1" >
+                                    <div class="inner-image">
+                                        <img src="../../assets/images/{{images.img}}" alt="">
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="row row2">
-                            <div class="image-card" *ngFor="let images of item.imagesRow1" >
-                                <div class="inner-image">
-                                    <img src="../../assets/images/{{images.img}}" alt="">
+                            <div class="row row2">
+                                <div class="image-card" *ngFor="let images of item.imagesRow1" >
+                                    <div class="inner-image">
+                                        <img src="../../assets/images/{{images.img}}" alt="">
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                
-                
                     <div class="content-container" *ngIf="item.index == selectedIndex" >
                         <div class="inner-content">
                             <div class="inner-content-heading">
@@ -38,8 +38,8 @@
                 
             </ng-container>   
                 
-            <div class="prev-icon" ><mat-icon class="nav-before nb1" >navigate_before</mat-icon><mat-icon class="nav-before nb2" >navigate_before</mat-icon></div>
-            <div class="next-icon" ><mat-icon class="nav-next nn1"  >navigate_next</mat-icon><mat-icon class="nav-next nn2">navigate_next</mat-icon></div>
+            <div class="prev-icon" (click)="navCarousalTo('L')"><mat-icon class="nav-before nb1" >navigate_before</mat-icon><mat-icon class="nav-before nb2" >navigate_before</mat-icon></div>
+            <div class="next-icon" (click)="navCarousalTo('R')"><mat-icon class="nav-next nn1"  >navigate_next</mat-icon><mat-icon class="nav-next nn2">navigate_next</mat-icon></div>
             <div class="dot-nav-container">
                 <div class="dot" *ngFor="let item of carousal" [ngClass]="{dotActive: item.index==selectedIndex}" (click)="moveCarousalTo(item.index)" >
                 </div>
@@ -48,5 +48,6 @@
         </div>
 
     </section>
+
 
 </div>

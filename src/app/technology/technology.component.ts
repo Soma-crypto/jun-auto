@@ -42,14 +42,41 @@ export class TechnologyComponent {
       index:4,
     }
   ]
+  carousalInterval:any;
 
   ngOnInit(){
+
+    this.carousalInterval = setInterval(()=>{
+      if(this.selectedIndex == 4){
+        this.selectedIndex =1; 
+      }else{
+        this.selectedIndex = this.selectedIndex+1;
+      }
+    },3000)
 
   }
 
   moveCarousalTo(idx:any){
+    clearInterval(this.carousalInterval);
     console.log(idx)
     this.selectedIndex = idx;
+  }
+
+  navCarousalTo(dir:any){
+    clearInterval(this.carousalInterval);
+      if(dir == 'L'){
+        if(this.selectedIndex == 1){
+          this.selectedIndex = 4
+        }else{
+          this.selectedIndex = this.selectedIndex - 1;
+        }
+      }else{
+        if(this.selectedIndex == 4){
+          this.selectedIndex = 1
+        }else{
+          this.selectedIndex = this.selectedIndex + 1;
+        }
+      }
   }
 
 }
