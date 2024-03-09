@@ -30,7 +30,7 @@
                                 {{item.contentHeading}}
                             </div>
                             <div class="inner-content-body">
-                            {{item.content}} ...<span class="viewmore-link" >View more</span>
+                            {{item.content}} ...<span (click)="scrollTo(item.focusId)" class="viewmore-link" >View more</span>
                             </div>
                             
                         </div>
@@ -49,6 +49,41 @@
         </div>
 
     </section>
-
+    <section class="technology-detail-container">
+        <div class="techonlogy-detail-heading-container">
+            <div class="techonlogy-detail-heading">
+                Our  Technology
+            </div>
+        </div>
+        <ng-container *ngFor="let item of carousal">
+            <div class="odd-component" id="{{item.focusId}}" *ngIf="item.isEven == false">
+                <div class="odd-component-inner-container" >
+                    <div class="text-container">
+                        <div class="content-heading">
+                            {{item.contentHeading}}
+                        </div>
+                        <div class="detail-content">
+                            {{item.detailContent}}
+                        </div>
+                    </div>
+                    <div class="slider-container"> slider </div>
+                </div>
+            </div>
+            <div class="even-component" id="{{item.focusId}}" *ngIf="item.isEven == true">
+                <div class="even-component-inner-container" >
+                    <div class="slider-container"> slider </div>
+                    <div class="text-container">
+                        <div class="content-heading">
+                            {{item.contentHeading}}
+                        </div>
+                        <div class="detail-content">
+                            {{item.detailContent}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </ng-container>
+        
+    </section>
 
 </div>

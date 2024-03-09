@@ -194,6 +194,46 @@ img{
 .viewmore-link{
     color: #19a8ddfa;
     text-decoration: underline;
+    cursor: pointer;
+}
+.technology-detail-container{
+    margin: 0px 30px;
+}
+.techonlogy-detail-heading{
+    display: flex;
+    font-size: 23px;
+    font-weight: 600;
+    border-bottom: 5px solid #2cb5bf;
+    width: 242px;
+    padding: 5px;
+}
+.odd-component, .even-component{
+    margin-top: 40px;
+}
+.odd-component-inner-container,.even-component-inner-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.text-container{
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+}
+.slider-container{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+.content-heading{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.detail-content{
+    font-size: 15px;
+    line-height: 25px;
+    font-weight: 400;
 }
 
 @keyframes slide-left {
