@@ -23,7 +23,8 @@ img{
     display: flex;
     gap: 10px;
     position: relative;
-    margin: 22px 30px;
+    margin: 0px 30px;
+    padding: 35px 0px;
     justify-content: center;
 }
 .image-container{
@@ -154,7 +155,7 @@ img{
 }
 .dot-nav-container{
     position: absolute;
-    bottom: -16px;
+    bottom: 14px;
     right: 50%;
     display: flex;
     justify-content: center;
@@ -186,6 +187,14 @@ img{
 .nb2,.nn2{
     margin-left: -33px;
 }
+.tech-tab-main-container{
+    // margin-top: -23px;
+    background-color: #f5f5f5;
+}
+.viewmore-link{
+    color: #19a8ddfa;
+    text-decoration: underline;
+}
 
 @keyframes slide-left {
     0%{
@@ -200,7 +209,7 @@ img{
 
  @media screen and (max-width:841px){
     .pair{
-        margin: 22px 0px;
+        margin: 0px 0px;
     }
     .row{
         width: 89%;
